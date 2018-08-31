@@ -17,8 +17,13 @@
 3- install packeges (html pug, gulp sass, gulp image, css minify, css counter)
 <br>
 <code>$ npm install gulp --save-dev</code>
+<br>
 <code>$ npm install gulp-pug --save-dev</code>
+<br>
 <code>$ npm install gulp-sass --save-dev</code>
+<br>
 <code>$ npm install gulp-image --save-dev</code>
+<br>
 <code>$ npm install gulp-csso --save-dev</code>
+<br>
 <code>$ npm install gulp-concat --save-dev</code>

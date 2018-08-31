@@ -4,7 +4,7 @@
 <h3> For build and develop Front End </h3>
 
 ----------------------------------
-<b>Install Environment</b>
+<b>Start Project Initialize</b>
 
 1- start to install node moduls
 <br>

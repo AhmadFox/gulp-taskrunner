@@ -1,21 +1,24 @@
 ![](_asseets/repo_image.jpeg)
 
-Gulp Task Manager
-- For begin development Front End 
+<h1>Gulp Task Manager</h1>
+<h3> For begin development Front End </h3>
 
 ----------------------------------
-Install Environment
+<b>Install Environment</b>
 
 1- start to install node moduls
-- $ npm install --save-dev
+<br>
+<code>$ npm install --save-dev</code>
 
 2- install gulp globle
-- $ npm install gulp-cli -g
+<br>
+<code>$ npm install gulp-cli -g</code>
 
 3- install packeges (html pug, gulp sass, gulp image, css minify, css counter)
-- $ npm install gulp --save-dev
-- $ npm install gulp-pug --save-dev
-- $ npm install gulp-sass --save-dev
-- $ npm install gulp-image --save-dev
-- $ npm install gulp-csso --save-dev
-- $ npm install gulp-concat --save-dev
+<br>
+<code>$ npm install gulp --save-dev</code>
+<code>$ npm install gulp-pug --save-dev</code>
+<code>$ npm install gulp-sass --save-dev</code>
+<code>$ npm install gulp-image --save-dev</code>
+<code>$ npm install gulp-csso --save-dev</code>
+<code>$ npm install gulp-concat --save-dev</code>

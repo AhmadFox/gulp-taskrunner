@@ -1,6 +1,6 @@
 ![](_asseets/repo_image.jpeg)
 
-Gulb Task Manager
+Gulp Task Manager
 - For begin development Front End 
 
 ----------------------------------

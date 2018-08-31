@@ -1,0 +1,6 @@
+@import './Variable';
+@import './Global';
+
+.app-view {
+	background: $bg-color;
+}

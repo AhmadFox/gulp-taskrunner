@@ -20,13 +20,20 @@
 
 4- install required gulp packages (html pug, gulp sass, gulp image, css minify, css counter)
 <br>
-<code>$ npm install gulp-sass --save-dev</code>
+<code>$ npm install --save-dev gulp-sass</code>
 <br>
-<code>$ npm install gulp-image --save-dev</code>
+<code>$ npm install --save-dev gulp-clean</code>
 <br>
-<code>$ npm install gulp-csso --save-dev</code>
+<code>$ npm install --save-dev gulp-image</code>
 <br>
-<code>$ npm install gulp-concat --save-dev</code>
+<code>$ npm install --save-dev gulp-rename</code>
+<br>
+<code>$ npm install --save-dev gulp-concat</code>
+<br>
+<code>$ npm install --save-dev gulp-csso</code>
+<br>
+<code>$ npm install --save-dev gulp-minify</code>
+<br>
 
 <h3>Commands Shell</h3>
 <b>for build one time:<code>$gulp</code></b>

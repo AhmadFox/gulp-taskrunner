@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	minifyCSS = require('gulp-csso'),
 	minifyJS = require('gulp-minify'),
-	sourcemaps = require('gulp-sourcemaps');
+	sourceMaps = require('gulp-sourcemaps');
 
 // -- gulp tasks for watch and build for one time
 // build html pages and components
@@ -17,22 +17,24 @@ gulp.task('html', function(){
 
 // combile images
 gulp.task('image', function () {
-  gulp.src('assets/img/*')
-    .pipe(gulp.dest('app/image'));
+	gulp.src('assets/img/*')
+		.pipe(gulp.dest('app/image'));
 });
  
 // build css pages
 gulp.task('sass', function () {
 	return gulp.src('assets/sass/**/*.scss')
 		.pipe(sass.sync().on('error', sass.logError))
+		.pipe(sourceMaps.init())
+		.pipe(sourceMaps.write())
 		.pipe(gulp.dest('app/css'));
 });
 
 // build js pages
 gulp.task('js', function(){
 	return gulp.src('assets/js/*.js')
-		.pipe(sourcemaps.init())
-		.pipe(sourcemaps.write())
+		.pipe(sourceMaps.init())
+		.pipe(sourceMaps.write())
 		.pipe(gulp.dest('app/js'))
 });
 
@@ -49,8 +51,8 @@ gulp.task('cssMinify', function () {
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(minifyCSS())
 		.pipe(rename({
-            suffix: '.min'
-        }))
+			suffix: '.min'
+		}))
 		.pipe(gulp.dest('build/css'));
 });
 
@@ -70,20 +72,20 @@ gulp.task('jsMinify', function(){
 
 // export and compress images
 gulp.task('imageCompress', function () {
-  gulp.src('assets/img/**/*')
-  .pipe(image({
-      svgo: true,
-      quiet: true,
-      optipng: true,
-      mozjpeg: true,
-      guetzli: true,
-      gifsicle: true,
-      pngquant: true,
-      concurrent: 10,
-      zopflipng: true,
-      jpegRecompress: true
-    }))
-    .pipe(gulp.dest('build/image'));
+	gulp.src('assets/img/**/*')
+		.pipe(image({
+			svgo: true,
+			quiet: true,
+			optipng: true,
+			mozjpeg: true,
+			guetzli: true,
+			gifsicle: true,
+			pngquant: true,
+			concurrent: 10,
+			zopflipng: true,
+			jpegRecompress: true
+		}))
+		.pipe(gulp.dest('build/image'));
 });
 
 

@@ -1,5 +1,4 @@
-@include './variables';
-@include './globle';
+@import 'globle';
 .app {
 	color: $text-color;
 	background-color: $bg-color;

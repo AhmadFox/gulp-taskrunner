@@ -6,19 +6,22 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	minifyCSS = require('gulp-csso'),
 	minifyJS = require('gulp-minify'),
+	connect = require('gulp-connect'),
 	sourceMaps = require('gulp-sourcemaps');
 
 // -- gulp tasks for watch and build for one time
 // build html pages and components
 gulp.task('html', function(){
 	return gulp.src('views/*.html')
-		.pipe(gulp.dest('app'));
+		.pipe(gulp.dest('app'))
+		.pipe(connect.reload());
 });
 
 // combile images
 gulp.task('image', function () {
 	gulp.src('assets/img/*')
-		.pipe(gulp.dest('app/image'));
+		.pipe(gulp.dest('app/image'))
+		.pipe(connect.reload());
 });
  
 // build css pages
@@ -27,7 +30,8 @@ gulp.task('sass', function () {
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(sourceMaps.init())
 		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('app/css'));
+		.pipe(gulp.dest('app/css'))
+		.pipe(connect.reload());
 });
 
 // build js pages
@@ -36,6 +40,7 @@ gulp.task('js', function(){
 		.pipe(sourceMaps.init())
 		.pipe(sourceMaps.write())
 		.pipe(gulp.dest('app/js'))
+		.pipe(connect.reload());
 });
 
 // gulp taskes for build final releas to production
@@ -88,7 +93,13 @@ gulp.task('imageCompress', function () {
 		.pipe(gulp.dest('build/image'));
 });
 
-
+// -- connect local server --
+gulp.task('connect', function() {
+	connect.server({
+		root: './app',
+		livereload: true
+	});
+});
 // -- watch function --
 // for reload browser and only bulid for changed files
 gulp.task('watch', function () {
@@ -98,11 +109,12 @@ gulp.task('watch', function () {
 	gulp.watch('assets/sass/**/*.scss', ['sass']);
 });
 
+
 // gulp build for one time
 gulp.task('default', [ 'html', 'sass', 'js', 'image' ]);
 
 // gulp build and watch -- run project --
-gulp.task('run', [ 'html', 'sass', 'js', 'image', 'watch' ]);
+gulp.task('run', [ 'html', 'sass', 'js', 'image', 'watch', 'connect' ]);
 
 // gulp minified and compress all files
 gulp.task('production', [ 'htmlbuild', 'cssMinify', 'jsMinify', 'imageCompress' ]);

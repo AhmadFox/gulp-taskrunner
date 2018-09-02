@@ -1,0 +1,6 @@
+@include './variables';
+@include './globle';
+.app {
+	color: $text-color;
+	background-color: $bg-color;
+}

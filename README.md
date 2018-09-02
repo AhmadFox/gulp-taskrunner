@@ -1,4 +1,4 @@
-![](_asseets/repo_image.jpeg)
+![](./assets/img/repo_image.jpeg)
 
 <h1>Gulp Task Runner</h1>
 <h3> For build and develop Front End </h3>

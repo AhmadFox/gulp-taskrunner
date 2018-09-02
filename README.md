@@ -14,9 +14,11 @@
 <br>
 <code>$ npm install gulp-cli -g</code>
 
-3- install packeges (html pug, gulp sass, gulp image, css minify, css counter)
+3- install Local gulp 
 <br>
 <code>$ npm install gulp --save-dev</code>
+
+4- install required gulp packages (html pug, gulp sass, gulp image, css minify, css counter)
 <br>
 <code>$ npm install gulp-sass --save-dev</code>
 <br>

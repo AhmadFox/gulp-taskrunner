@@ -37,11 +37,11 @@
 <br>
 
 <h3>Commands Shell</h3>
-<b>for build one time:<code>$gulp</code></b>
+<b>build for one time:<code>$gulp</code></b>
 <br>
-<b>for run gulp watch:<code>$gulp run</code></b>
+<b>run gulp watch:<code>$gulp run</code></b>
 <br>
-<b>for build file for production:<code>$gulp production</code></b>
+<b>build production files :<code>$gulp production</code></b>
 <br>
 
 <h3>Resources</h3>

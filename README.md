@@ -35,6 +35,9 @@
 <br>
 <code>$ npm install --save-dev gulp-minify</code>
 <br>
+<br>
+<code>$ npm install --save-dev gulp-connect</code>
+<br>
 
 <h3>Commands Shell</h3>
 <b>build for one time:<code>$gulp</code></b>
